@@ -1,0 +1,22 @@
+// 3 Января 2019
+// Ардуинщик
+// LCD I2C | ARDUINO
+//   GND   |   GND 
+//   VCC   |    +5
+//   SDA   |    A4
+//   SCL   |    A5
+
+#include <Wire.h> //Подключаем библиотеку 
+#include <LiquidCrystal_I2C.h>//Подключаем библиотеку 
+LiquidCrystal_I2C lcd(0x27, 16, 2);//16 символов 2 строчки
+
+void setup()//Цикл setup выполняется 1 раз при запуске ARDUINO
+{
+	lcd.begin();//Cкорость передачи в дисплей
+	lcd.backlight();
+	lcd.print("Hello, world!");//Пишем в дисплей
+}
+
+void loop()//Цикл loop выполняется бесконечно сверху вниз
+{
+}
